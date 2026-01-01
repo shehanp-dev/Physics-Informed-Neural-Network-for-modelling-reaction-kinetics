@@ -368,7 +368,7 @@ in the Software without restriction...
 
 **Your Name**
 - Email: shehanpiyumantha310@gmail.com 
-- LinkedIn: [Your Profile](linkedin.com/in/shehan-piyumantha-900640374)
+- LinkedIn: [Shehan Piyumantha ](linkedin.com/in/shehan-piyumantha-900640374)
 
 
 **Project Link**: [https://github.com/yourusername/PINN-Chemical-Kinetics](https://github.com/yourusername/PINN-Chemical-Kinetics)
@@ -400,6 +400,6 @@ If you use this code in your research, please cite:
 
 **[⬆ Back to Top](#physics-informed-neural-networks-for-chemical-kinetics)**
 
-Made with ❤️ and ⚛️ by [Shehan Piyumantha]
+Made with ❤️ and ⚛️ by Shehan Piyumantha
 
 </div>
