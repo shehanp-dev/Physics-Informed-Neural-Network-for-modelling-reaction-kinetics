@@ -7,7 +7,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-*A modern machine learning approach to discovering rate constants from noisy experimental data*
+*A modern machine learning approach to model chemical kinetics from experimental data*
 
 [Key Features](#key-features) • [Installation](#installation) • [Quick Start](#quick-start) • [Theory](#theory) • [Results](#results) • [Citation](#citation)
 
@@ -82,25 +82,6 @@ train_pinn(model, time_data, concentration_data, epochs=15000)
 k_learned = model.k.item() / time_scale
 print(f"Learned rate constant: {k_learned:.6e} s⁻¹")
 ```
-
----
-
-## 📊 Results
-
-### Rate Constant Discovery
-
-| Parameter | True Value | PINN Value | Error |
-|-----------|-----------|------------|-------|
-| k (s⁻¹) | 3.38 × 10⁻⁵ | 3.41 × 10⁻⁵ | 0.89% |
-| [A]₀ (M) | 1.00 | 1.02 | 2.00% |
-| t₁/₂ (hours) | 5.69 | 5.64 | 0.88% |
-
-### Visual Results
-
-<div align="center">
-<img src="results/N2O5_PINN_combined_plots.png" width="800"/>
-<p><i>PINN predictions (blue) closely follow the true solution (black dashed) despite 8% experimental noise (red points)</i></p>
-</div>
 
 ---
 
@@ -212,28 +193,6 @@ epochs = 15000
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
 ```
-
-### Critical Implementation Tips
-
-⚠️ **Common Pitfalls and Solutions:**
-
-1. **Collapsed Solution (Constant Prediction)**
-   - ❌ Problem: `λ_physics` too small
-   - ✅ Solution: Increase to 100-1000
-
-2. **Training Instability (NaN losses)**
-   - ❌ Problem: Large time values without normalization
-   - ✅ Solution: Always normalize time to [0, 1]
-
-3. **Poor Rate Constant Accuracy**
-   - ❌ Problem: Bad initialization
-   - ✅ Solution: Initialize k near expected value
-
-4. **Large Loss Spikes**
-   - ❌ Problem: Exploding gradients
-   - ✅ Solution: Apply gradient clipping
-
----
 
 ## 📈 Advanced Applications
 
@@ -372,18 +331,6 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ---
 
-## 📊 Benchmark Results
-
-### Performance Comparison
-
-| Metric | Traditional | PINN | Improvement |
-|--------|------------|------|-------------|
-| Rate constant error | 2.5% | 0.89% | 64% better |
-| Handles noise | Poor | Excellent | ✓ |
-| Handles missing data | No | Yes | ✓ |
-| Continuous predictions | No | Yes | ✓ |
-| Training time | N/A | ~2 min | Acceptable |
-
 ### System Requirements
 
 - **CPU**: Any modern processor (training takes ~2 minutes)
@@ -420,9 +367,9 @@ in the Software without restriction...
 ## 📧 Contact
 
 **Your Name**
-- Email: your.email@example.com
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+- Email: shehanpiyumantha310@gmail.com 
+- LinkedIn: [Your Profile](linkedin.com/in/shehan-piyumantha-900640374)
+
 
 **Project Link**: [https://github.com/yourusername/PINN-Chemical-Kinetics](https://github.com/yourusername/PINN-Chemical-Kinetics)
 
@@ -453,6 +400,6 @@ If you use this code in your research, please cite:
 
 **[⬆ Back to Top](#physics-informed-neural-networks-for-chemical-kinetics)**
 
-Made with ❤️ and ⚛️ by [Your Name]
+Made with ❤️ and ⚛️ by [Shehan Piyumantha]
 
 </div>
