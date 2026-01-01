@@ -375,10 +375,6 @@ in the Software without restriction...
 
 ---
 
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/PINN-Chemical-Kinetics&type=Date)](https://star-history.com/#yourusername/PINN-Chemical-Kinetics&Date)
-
 ---
 
 ## 📖 Citation
